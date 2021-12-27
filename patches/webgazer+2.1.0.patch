@@ -1,0 +1,10 @@
+diff --git a/node_modules/webgazer/src/facemesh.mjs b/node_modules/webgazer/src/facemesh.mjs
+index 1224c5a..c2ae78d 100644
+--- a/node_modules/webgazer/src/facemesh.mjs
++++ b/node_modules/webgazer/src/facemesh.mjs
+@@ -1,4 +1,4 @@
+-import FacemeshModel from '@tensorflow-models/facemesh';
++import * as FacemeshModel from '@tensorflow-models/facemesh';
+ /**
+  * Constructor of TFFaceMesh object
+  * @constructor

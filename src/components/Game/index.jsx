@@ -18,19 +18,22 @@ import _ from 'lodash';
 const Moles = ({ moles, onWhack, playing, starting, finished }) => {
   const [gaze, setGaze] = React.useState({ x: 0, y: 0 });
   
-  const debouceGaze = React.useCallback(
-    _.debounce((val) => {
-    setGaze(val);
-  }
-  , 500), []);
+  // const debouceGaze = React.useCallback(
+  //   _.debounce((val) => {
+  //   setGaze(val);
+  // }
+  // , 500), []);
   React.useEffect(() => {
+    // window.addEventListener('mousemove', e => {
+    //   setGaze({ x: e.clientX, y: e.clientY });
+    // })
     // eslint-disable-next-line no-undef
     webgazer.setGazeListener((data) => {
       if (data == null) {
           return;
       }
       const { x, y } = data;
-      debouceGaze({ x, y });
+      setGaze({ x, y });
   }).begin();
   }, []);
   

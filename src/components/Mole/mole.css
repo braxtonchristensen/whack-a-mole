@@ -18,6 +18,12 @@
   display: none;
 }
 
+.mole__container {
+  display: flex;
+  height: 300px;
+  align-items: flex-end;
+}
+
 .specs__lens {
   fill: hsla(198, 80%, calc((80 - (var(--shades, 0) * 75)) * 1%), calc(0.5 + (var(--shades, 0) * 0.5)));
   stroke: hsl(var(--accent), 25%, calc((30 - (var(--shades, 0) * 30)) * 1%));
@@ -40,7 +46,7 @@
 }
 
 .mole__hole {
-  width: 20vmin;
+  width: 50vmin;
   height: 20vmin;
   position: relative;
   cursor: none;
